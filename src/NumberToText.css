@@ -1,0 +1,20 @@
+label.number-edit {  
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+input.number-edit {
+  text-align: right;
+  height: 26px;
+  background-color: #1F1F1F;
+  border-color: #0A0A0A;
+  color: #26c406;
+  margin-left: 10px;
+  padding: .4em .4em .5em .4em;
+}
+
+.number-edit {
+  height: 26px;
+  font-size: 22px;
+}
+
