@@ -90,6 +90,9 @@ function numberToText(val) {
    else if (tens == 9)
      str = 'NINETY '+str;
 
+  if (hundreds > 0 && (tens > 0 || units > 0)) 
+     str = 'AND '+str; 
+
    if (hundreds == 1)
      str = 'ONE HUNDRED '+str;
    else if (hundreds == 2)
