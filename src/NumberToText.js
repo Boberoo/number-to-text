@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './NumberToText.css';
 
 function numberToText(val) {
@@ -18,7 +17,7 @@ function numberToText(val) {
     remainder = (remainder * 1000);
     remainder = (val - remainder);
 
-    if (remainder != 0) 
+    if (remainder !== 0) 
         str = numberName+' '+str;
 
     hundreds = (remainder / 100);
@@ -29,103 +28,103 @@ function numberToText(val) {
     tens = Math.floor(tens);
     units = (units - (tens * 10));
 
-    if (tens != 1) 
-      if (units == 1) 
+    if (tens !== 1) 
+      if (units === 1) 
         str = 'ONE '+str;
-      else if (units == 2) 
+      else if (units === 2) 
         str = 'TWO '+str;
-      else if (units == 3) 
+      else if (units === 3) 
         str = 'THREE '+str;
-      else if (units == 4) 
+      else if (units === 4) 
         str = 'FOUR '+str;
-      else if (units == 5) 
+      else if (units === 5) 
         str = 'FIVE '+str;
-      else if (units == 6) 
+      else if (units === 6) 
         str = 'SIX '+str;
-      else if (units == 7) 
+      else if (units === 7) 
         str = 'SEVEN '+str;
-      else if (units == 8) 
+      else if (units === 8) 
         str = 'EIGHT '+str;
-      else if (units == 9) 
+      else if (units === 9) 
         str = 'NINE '+str;
       else {
         //do nothing
       }
     else
-      if (units == 1)
+      if (units === 1)
         str = 'ELEVEN '+str;
-      else if (units == 2)
+      else if (units === 2)
         str = 'TWELVE '+str;
-      else if (units == 3)
+      else if (units === 3)
         str = 'THIRTEEN '+str;
-      else if (units == 4)
+      else if (units === 4)
         str = 'FOURTEEN '+str;
-      else if (units == 5)
+      else if (units === 5)
         str = 'FIFTEEN '+str;
-      else if (units == 6)
+      else if (units === 6)
         str = 'SIXTEEN '+str;
-      else if (units == 7)
+      else if (units === 7)
         str = 'SEVENTEEN '+str;
-      else if (units == 8)
+      else if (units === 8)
         str = 'EIGHTEEN '+str;
-      else if (units == 9)
+      else if (units === 9)
         str = 'NINETEEN '+str;
-      else if (units == 0)
+      else if (units === 0)
         str = 'TEN '+str;    
     
-   if (tens == 2)
+   if (tens === 2)
      str = 'TWENTY '+str;
-   else if (tens == 3)
+   else if (tens === 3)
      str = 'THIRTY '+str;
-   else if (tens == 4)
+   else if (tens === 4)
      str = 'FOURTY '+str;
-   else if (tens == 5)
+   else if (tens === 5)
      str = 'FIFTY '+str;
-   else if (tens == 6)
+   else if (tens === 6)
      str = 'SIXTY '+str;
-   else if (tens == 7)
+   else if (tens === 7)
      str = 'SEVENTY '+str;
-   else if (tens == 8)
+   else if (tens === 8)
      str = 'EIGHTTY '+str;
-   else if (tens == 9)
+   else if (tens === 9)
      str = 'NINETY '+str;
 
   if (hundreds > 0 && (tens > 0 || units > 0)) 
      str = 'AND '+str; 
 
-   if (hundreds == 1)
+   if (hundreds === 1)
      str = 'ONE HUNDRED '+str;
-   else if (hundreds == 2)
+   else if (hundreds === 2)
      str = 'TWO HUNDRED '+str;
-   else if (hundreds == 3)
+   else if (hundreds === 3)
      str = 'THREE HUNDRED '+str;
-   else if (hundreds == 4)
+   else if (hundreds === 4)
      str = 'FOUR HUNDRED '+str;
-   else if (hundreds == 5)
+   else if (hundreds === 5)
      str = 'FIVE HUNDRED '+str;
-   else if (hundreds == 6)
+   else if (hundreds === 6)
      str = 'SIX HUNDRED '+str;
-   else if (hundreds == 7)
+   else if (hundreds === 7)
      str = 'SEVEN HUNDRED '+str;
-   else if (hundreds == 8)
+   else if (hundreds === 8)
      str = 'EIGHT HUNDRED '+str;
-   else if (hundreds == 9)
+   else if (hundreds === 9)
      str = 'NINE HUNDRED '+str;
     
    val = (val / 1000);
    val = Math.floor(val);
 
-   if (numberName == '')
+   if (numberName === '')
      numberName = 'THOUSAND';
-   else if (numberName == 'THOUSAND')
+   else if (numberName === 'THOUSAND')
      numberName = 'MILLION';
-   else if (numberName == 'MILLION')
+   else if (numberName === 'MILLION')
      numberName = 'BILLION';
-   else if (numberName == 'BILLION')
+   else if (numberName === 'BILLION')
      numberName = 'TRILLION';
-   else if (numberName == 'TRILLION')
+   else if (numberName === 'TRILLION')
      numberName = 'QUADRILLION';
-   else if (numberName == 'QUADRILLION')
+   else if (numberName === 'QUADRILLION')
      numberName = 'QUINTILLION';
    else
      numberName = 'ERROR';
