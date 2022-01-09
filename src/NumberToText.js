@@ -1,7 +1,7 @@
 import React from 'react';
 import './NumberToText.css';
 
-function numberToText(val) {
+export const numberToText = (val) => {
   let str = '';
   let numberName = '';
   let remainder = 0;
@@ -89,8 +89,9 @@ function numberToText(val) {
    else if (tens === 9)
      str = 'NINETY '+str;
 
-  if (hundreds > 0 && (tens > 0 || units > 0)) 
+  if ((hundreds > 0 || Math.floor(val / 1000) > 0) && (tens > 0 || units > 0))    
      str = 'AND '+str; 
+   
 
    if (hundreds === 1)
      str = 'ONE HUNDRED '+str;
@@ -130,7 +131,7 @@ function numberToText(val) {
      numberName = 'ERROR';
   }
   
-  return str;
+  return str.trim();
 }
 
 
@@ -159,12 +160,12 @@ class DisplayNumberAsText extends React.Component {
   }
       
   render() {
-    return (<div><p>{this.state.numberAsText}</p></div>);
+    return (<div><p id="numberDisplay">{this.state.numberAsText}</p></div>);
   }
 }
 
 
-class NumberToText extends React.Component {
+export class NumberToText extends React.Component {
     
   constructor (props) {
     super(props);
@@ -189,4 +190,4 @@ class NumberToText extends React.Component {
   }
 }
 
-export default NumberToText;
+//export default NumberToText;

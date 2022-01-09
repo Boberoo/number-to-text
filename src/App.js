@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import NumberToText from './NumberToText.js';
+import { NumberToText } from './NumberToText.js';
 
 
 
